@@ -1,0 +1,40 @@
+﻿@page
+@model CRUD_Cursos.Pages.Cursos.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+    <div class="card shadow-sm mt-4">
+         <div class="card-header bg-info text-white">
+              <h4><i class="fas fa-eye me-2"></i>Detalles del Curso</h4>
+         </div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">
+                <i class="fas fa-book me-1"></i> Nombre:
+            </dt>
+            <dd class="col-sm-9">@Model.Curso.Nombre</dd>
+
+            <dt class="col-sm-3">
+                <i class="fas fa-barcode me-1"></i> Código:
+            </dt>
+            <dd class="col-sm-9">@Model.Curso.Codigo</dd>
+
+            <dt class="col-sm-3">
+                <i class="fas fa-users me-1"></i> Cupo:
+            </dt>
+            <dd class="col-sm-9">@Model.Curso.Cupo</dd>
+        </dl>
+
+        <div class="d-flex justify-content-start gap-2 mt-4">
+            <a asp-page="./Edit" asp-route-id="@Model.Curso.Id" class="btn btn-warning text-white">
+                <i class="fas fa-edit me-1"></i> Editar
+            </a>
+            <a asp-page="./Index" class="btn btn-outline-secondary">
+                <i class="fas fa-arrow-left me-1"></i> Volver al Listado
+            </a>
+        </div>
+    </div>
+       
+    </div>
